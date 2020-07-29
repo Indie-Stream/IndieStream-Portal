@@ -1,0 +1,52 @@
+<main role="main">
+
+    <!-- Part 1 -->
+    <div id="shows_new" class="">
+        <h1>New Shows</h1>
+        <section>
+            <img src="assets/images/shows/red_blue_pink_gradiant.png" alt="img"/>
+            <p>Anime description here.</p>
+        </section>
+        <div class="part1__listing" *ngFor="let item of items">
+            <img src="{{item}}" alt="img">
+            <p>{{item}}</p>
+        </div>
+    </div>
+    <!-- End of Part 1 -->
+
+    <!-- Part 2 -->
+    <div id="shows_by_genre" class="">
+        <h1>By Genre</h1>
+        <ngb-carousel *ngIf="images">
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="images[0]" alt="Random first slide">
+                </div>
+                <div class="carousel-caption">
+                    <h3>Mr. No 1</h3>
+                    <p>YES!</p>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide> 
+                <div class="picsum-img-wrapper">
+                    <img [src]="images[1]" alt="Random second slide">
+                </div>
+                <div class="carousel-caption">
+                    <h3>No one but me!</h3>
+                    <p>I am not you.</p>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="images[2]" alt="Random third slide">
+                </div>
+                <div class="carousel-caption">
+                    <h3>Otaku Love</h3>
+                    <p>Anime masu</p>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+    <!-- End of Part 2 -->
+    
+</main>
